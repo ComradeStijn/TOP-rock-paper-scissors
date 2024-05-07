@@ -1,5 +1,30 @@
 const CHOICES = ["rock", "paper", "scissors"];
 
+let humanScore = 0, computerScore = 0;
+
+playRound(getHumanChoice(), getComputerChoice());
+
+
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+        console.log("You tie!");
+        return;
+    } else if (
+        (humanChoice === 'rock' && computerChoice === 'scissors') ||
+        (humanChoice === 'paper' && computerChoice === 'rock') ||
+        (humanChoice === 'scissors' && computerChoice === 'paper')
+    ) {
+        console.log(`You win, ${humanChoice} beats ${computerChoice}`);
+        humanScore++;
+        return;
+    } else {
+        console.log(`You lose, ${computerChoice} beats ${humanChoice}`);
+        computerScore++;
+        return;
+    }
+}
+
+
 function getComputerChoice() {
     // Get random integer between 1 and 3
     randomInt = Math.floor(Math.random() * 3 + 1);
@@ -14,6 +39,7 @@ function getComputerChoice() {
             return;
     }
 }
+
 
 function getHumanChoice() {
     let choice;
