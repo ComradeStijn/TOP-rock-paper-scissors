@@ -1,3 +1,5 @@
+const CHOICES = ["rock", "paper", "scissors"];
+
 function getComputerChoice() {
     // Get random integer between 1 and 3
     randomInt = Math.floor(Math.random() * 3 + 1);
@@ -11,6 +13,14 @@ function getComputerChoice() {
         default:
             return;
     }
+}
+
+function getHumanChoice() {
+    let choice;
+    do {
+        choice = prompt("Choose rock.paper.scissors: ").toLowerCase();
+    } while (!CHOICES.includes(choice)); 
+    return choice;
 }
 
 
