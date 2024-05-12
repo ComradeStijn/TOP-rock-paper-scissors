@@ -1,8 +1,29 @@
 const CHOICES = ["rock", "paper", "scissors"];
 
 let humanScore = 0, computerScore = 0;
+let counter = 1;
+
+document.addEventListener("click", function(button) {
+    switch (button.target.id) {
+        case "rock":
+            break;
+        case "paper":
+            break;
+        case "scissors":
+            break;
+        default:
+            break;
+    };
+});
 
 
+const gameCounter = document.querySelector(".gameCounter");
+gameCounter.textContent = `Game ${counter} of 5`;
+
+const resultField = document.querySelector(".results");
+const result = document.createElement("p");
+result.textContent = "Hello";
+resultField.appendChild(result);
 
 
 function playRound(humanChoice, computerChoice) {
