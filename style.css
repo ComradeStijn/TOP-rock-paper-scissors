@@ -1,9 +1,9 @@
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40%;
-    margin-bottom: 5%;
+    margin: 30vh auto;
     gap: 20px;
 }
 
@@ -28,4 +28,10 @@ button:hover {
     text-align: center;
     font-size: larger;
     font-weight: bold;
+}
+
+.resultField {
+    width: 430px;
+    margin: auto;
+    margin-top: 20px;
 }
