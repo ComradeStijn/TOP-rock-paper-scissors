@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40%;
+    gap: 20px;
+}
+
+button {
+    cursor: pointer;
+    background: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    border: 2px solid #04aa6d;
+    border-radius: 5px;
+    color: #04aa6d;
+}
+
+button:hover {
+    background-color: #04aa6d;
+    color: white;
+}

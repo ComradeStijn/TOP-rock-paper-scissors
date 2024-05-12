@@ -2,21 +2,7 @@ const CHOICES = ["rock", "paper", "scissors"];
 
 let humanScore = 0, computerScore = 0;
 
-playGame();
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(), getComputerChoice());
-    }
-    if (humanScore === computerScore) {
-        alert(`You tie. ${humanScore} vs CPU ${computerScore}`);
-    } else if (humanScore > computerScore) {
-        alert(`You win. ${humanScore} vs CPU ${computerScore}`);
-    } else {
-        alert(`You lose. ${humanScore} vs CPU ${computerScore}`);
-    }
-    return;
-}
 
 
 function playRound(humanChoice, computerChoice) {
